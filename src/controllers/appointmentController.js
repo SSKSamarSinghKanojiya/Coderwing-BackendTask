@@ -33,7 +33,7 @@ exports.bookAppointment = async (req, res) => {
   }
 };
 
-// Cancel an Appointment
+
 exports.cancelAppointment = async (req, res) => {
   try {
     const appointment = await Appointment.findById(req.params.id);
@@ -50,7 +50,6 @@ exports.cancelAppointment = async (req, res) => {
   }
 };
 
-// Get Appointments for Logged-In User
 exports.getAppointments = async (req, res) => {
   try {
     const appointments = await Appointment.find({
